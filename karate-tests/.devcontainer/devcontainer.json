@@ -1,5 +1,5 @@
 {
-    "name": "Java 17 & Karate Project",
+    "name": "Karate Dev Environment",
     "image": "mcr.microsoft.com/devcontainers/java:17-bullseye",
     "features": {
         "ghcr.io/devcontainers/features/java:1": {
@@ -7,13 +7,6 @@
             "installMaven": "true"
         }
     },
-    "postCreateCommand": "mvn -v",
-    "customizations": {
-        "vscode": {
-            "extensions": [
-                "karatelabs.karate",
-                "vscjava.vscode-java-pack"
-            ]
-        }
-    }
+    "onCreateCommand": "sdk install java 17.0.10-ms || echo 'Déjà installé'",
+    "postCreateCommand": "cd karate-tests && mvn install -DskipTests"
 }
