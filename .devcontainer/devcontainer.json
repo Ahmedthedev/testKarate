@@ -17,7 +17,7 @@
                     "*.feature": "feature"
                 },
                 "code-runner.executorMap": {
-    "feature": "cd $workspaceRoot && mvn test -Dtest=RunnerTest -Dkarate.feature=${fileBasename}"
+    "feature": "cd /workspaces/testKarate && mvn test -Dtest=RunnerTest -Dkarate.feature=$fileBasenameNoExtension.feature"
 },
                 "code-runner.runInTerminal": true,
                 "code-runner.saveFileBeforeRun": true,
