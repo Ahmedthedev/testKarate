@@ -10,18 +10,21 @@
             "alexkrechik.cucumberautocomplete",
             "rangav.vscode-thunder-client",
             "ayushmels.jsoncrackvscode",
-            "esbenp.prettier-vscode"
+            "esbenp.prettier-vscode",
+            "george-alisson.html-preview-vscode",
+            "ritwickdey.liveserver"
             ],
             "settings": {
                 "files.associations": {
                     "*.feature": "feature"
                 },
                 "code-runner.executorMap": {
-    "feature": "cd /workspaces/testKarate && mvn test -Dtest=RunnerTest -Dkarate.feature=$fileBasenameNoExtension.feature"
+    "feature": "/workspaces/testKarate/run-feature.sh"
 },
                 "code-runner.runInTerminal": true,
                 "code-runner.saveFileBeforeRun": true,
-                "code-runner.clearPreviousOutput": true
+                "code-runner.clearPreviousOutput": true,
+                  "code-runner.fileDirectoryAsCwd": false
             }
         }
     },
