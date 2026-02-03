@@ -1,0 +1,6 @@
+#surefire_0
+#Tue Feb 03 18:20:55 UTC 2026
+basedir=/workspaces/testKarate/karate-tests
+karate.options=classpath\:api-local.feature
+localRepository=/home/codespace/.m2/repository
+session.topDirectory=/workspaces/testKarate/karate-tests

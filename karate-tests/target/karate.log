@@ -1,0 +1,13 @@
+18:15:32.251 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+18:19:18.708 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': --loglevel debug
+18:20:01.260 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+18:20:56.194 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': classpath:api-local.feature
+18:20:56.839 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+18:21:51.795 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': classpath:api-local.feature
+18:21:52.534 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+18:29:55.384 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': classpath:api-local.feature
+18:29:56.051 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+18:31:20.174 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': classpath:api-local.feature
+18:31:20.875 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+18:31:22.735 [main] INFO  com.intuit.karate - [print] Le moteur Karate fonctionne, le chat s'appelle: Félix 
+18:31:23.722 [main] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 1 (0 remaining) classpath:api-local.feature
