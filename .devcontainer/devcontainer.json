@@ -17,7 +17,7 @@
                     "*.feature": "feature"
                 },
                 "code-runner.executorMap": {
-                    "feature": "cd karate-tests && mvn test -Dkarate.options='classpath:\\$fileName' -DforkCount=0"
+                    "feature": "mvn test -Dkarate.options='classpath:\\$fileName' -DforkCount=0"
                 },
                 "code-runner.runInTerminal": true,
                 "code-runner.saveFileBeforeRun": true,
