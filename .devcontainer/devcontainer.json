@@ -17,7 +17,7 @@
                     "*.feature": "feature"
                 },
                 "code-runner.executorMap": {
-                    "feature": "mvn test -Dkarate.options='classpath:\\$fileName' -DforkCount=0"
+                    "feature": "mvn test"
                 },
                 "code-runner.runInTerminal": true,
                 "code-runner.saveFileBeforeRun": true,
@@ -32,5 +32,5 @@
         }
     },
     "onCreateCommand": "sdk install java 17.0.10-ms || echo 'Déjà installé'",
-    "postCreateCommand": "cd karate-tests && mvn clean test -Dkarate.options='classpath:api-local.feature' -DforkCount=0 && mvn install -DskipTests"
+    "postCreateCommand": "cd karate-tests && mvn clean test -Dkarate.options='classpath:api-local.feature' -DforkCount=0 && mvn install -DskipTests && mvn clean compile" 
 }
