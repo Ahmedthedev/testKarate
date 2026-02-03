@@ -1,6 +1,18 @@
 {
     "name": "Karate Dev Environment",
     "image": "mcr.microsoft.com/devcontainers/java:17-bullseye",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+            "karatelabs.karate",
+            "vscjava.vscode-java-pack",
+            "alexkrechik.cucumberautocomplete",
+            "rangav.vscode-thunder-client",
+            "ayushmels.jsoncrackvscode",
+            "esbenp.prettier-vscode"
+            ]
+        }
+    },
     "features": {
         "ghcr.io/devcontainers/features/java:1": {
             "version": "17",
@@ -8,5 +20,5 @@
         }
     },
     "onCreateCommand": "sdk install java 17.0.10-ms || echo 'Déjà installé'",
-    "postCreateCommand": "cd karate-tests && mvn install -DskipTests"
+    "postCreateCommand": "cd karate-tests && mvn clean test -Dkarate.options='classpath:api-local.feature' -DforkCount=0 && mvn install -DskipTests"
 }
