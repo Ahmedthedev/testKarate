@@ -6,11 +6,23 @@
             "extensions": [
             "karatelabs.karate",
             "vscjava.vscode-java-pack",
+            "formulahendry.code-runner",
             "alexkrechik.cucumberautocomplete",
             "rangav.vscode-thunder-client",
             "ayushmels.jsoncrackvscode",
             "esbenp.prettier-vscode"
-            ]
+            ],
+            "settings": {
+                "files.associations": {
+                    "*.feature": "feature"
+                },
+                "code-runner.executorMap": {
+                    "feature": "cd karate-tests && mvn test -Dkarate.options='classpath:\\$fileName' -DforkCount=0"
+                },
+                "code-runner.runInTerminal": true,
+                "code-runner.saveFileBeforeRun": true,
+                "code-runner.clearPreviousOutput": true
+            }
         }
     },
     "features": {
