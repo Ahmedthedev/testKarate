@@ -17,7 +17,7 @@
                     "*.feature": "feature"
                 },
                 "code-runner.executorMap": {
-                    "feature": "git status"
+                    "feature": "mvn test -Dtest=RunnerTest"
                 },
                 "code-runner.runInTerminal": true,
                 "code-runner.saveFileBeforeRun": true,
