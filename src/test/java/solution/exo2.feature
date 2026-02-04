@@ -5,11 +5,15 @@ Background:
 
 Scenario: Récupérer un animal par son ID
   # ÉTAPE 1 : Récupérer un animal disponible
-  Given path 'pet/findByStatus?status=available'
+  # ERREUR 1 : On ne met pas les Query Params dans le 'path'
+  # SOLUTION : Utiliser le mot-clé 'param'
+  Given path 'pet/findByStatus'
+  And param status = 'available'
   When method GET
   Then status 200
   
   # On extrait l'ID du premier animal de la liste
+  # Rappel : response est une liste [], donc on accède au premier avec [0]
   * def petId = response[0].id
   * print 'ID récupéré :', petId
   
@@ -21,4 +25,3 @@ Scenario: Récupérer un animal par son ID
   # ÉTAPE 3 : Validation
   And match response.id == petId
   And match response.name == #string
-  
